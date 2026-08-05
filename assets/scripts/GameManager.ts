@@ -1,0 +1,93 @@
+import { _decorator, Component, Node, director, UIOpacity, RigidBody, RigidBody2D, BoxCollider2D } from 'cc';
+import { AnimUtils } from './AnimUtils';
+import { CameraController } from './CameraController';
+import super_html_playable from './super_html_playable';
+import { ValueCarrier } from './ValueCarrier';
+import { CharacterMovement } from './CharacterMovement';
+const { ccclass, property } = _decorator;
+
+@ccclass('GameManager')
+export class GameManager extends Component {
+    private static _instance: GameManager = null!;
+
+    @property(Node) playerNode: Node = null!;
+    @property(Node) winScreen: Node = null!;
+    @property(Node) failScreen: Node = null!;
+    @property([Node]) rooms: Node[] = [];
+    @property(Node) hp: Node = null!;
+    @property(Node) splash: Node = null!;
+
+    private _keys: number = 0;
+    private _health: number = 3;
+
+    static get instance(): GameManager {
+        return this._instance;
+    }
+
+    get keys(): number {
+        return this._keys;
+    }
+
+    onLoad() {
+        if (GameManager._instance) {
+            this.node.destroy();
+            return;
+        }
+        GameManager._instance = this;
+        director.addPersistRootNode(this.node);
+        //this.rooms[2].active = false;
+        //this.rooms[3].active = false;
+    }
+
+    addKey(amount: number = 1) {
+        this._keys += amount;
+        director.emit('key-count-changed', this._keys);
+    }
+
+    useKeys(amount: number): boolean {
+        if (this._keys >= amount) {
+            this._keys -= amount;
+            director.emit('key-count-changed', this._keys);
+            return true;
+        }
+        return false;
+    }
+
+    onHealthLoss() {
+        this._health--;
+        if (this._health == 0) {
+            this.gameOver();
+            return;
+        }
+        this.hp.children[this._health].active = false;
+        director.emit('restart');
+        this.scheduleOnce(() => {
+            this.playerNode.getComponent(CharacterMovement).stop();
+            this.scheduleOnce(() => {
+                this.playerNode.getComponent(RigidBody2D).enabled = false;
+                this.scheduleOnce(() => {
+                    this.playerNode.setPosition(-340, -2340);
+                    this.playerNode.getComponent(ValueCarrier).reset();
+                    this.scheduleOnce(() => {
+                        this.playerNode.getComponent(RigidBody2D).enabled = true;
+                    }, 0);
+                }, 0);
+            }, 0);
+        }, 0);
+    }
+
+    public gameOver() {
+        CameraController.instance.reset();
+        //this.winScreen.getComponent(UIOpacity).opacity = 0;
+        this.failScreen.active = true;
+    }
+
+    public win() {
+        CameraController.instance.reset();
+        this.winScreen.active = true;
+    }
+
+    onInstallButtonClick() {
+        super_html_playable.download();
+    }
+}

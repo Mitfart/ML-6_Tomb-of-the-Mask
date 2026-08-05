@@ -1,0 +1,189 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\CharacterMovement.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\CharacterMovement.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\GameManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\GameManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Boss.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\Boss.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Portal.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\Portal.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Enemy.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\Enemy.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\RestartableObject.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\RestartableObject.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Sword.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\Sword.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ValueCarrier.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\ValueCarrier.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Door.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\Door.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ColorUtils.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\ColorUtils.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Boss.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Boss.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\Boss.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Boss.ts",
+              "RelativeToolTip": "assets\\scripts\\Boss.ts",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwA8AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T14:04:56.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Sword.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Sword.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\Sword.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Sword.ts",
+              "RelativeToolTip": "assets\\scripts\\Sword.ts",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:30:11.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ValueCarrier.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ValueCarrier.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\ValueCarrier.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ValueCarrier.ts",
+              "RelativeToolTip": "assets\\scripts\\ValueCarrier.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:15:36.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Door.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Door.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\Door.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Door.ts",
+              "RelativeToolTip": "assets\\scripts\\Door.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:10:10.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RestartableObject.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\RestartableObject.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\RestartableObject.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\RestartableObject.ts",
+              "RelativeToolTip": "assets\\scripts\\RestartableObject.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:09:14.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Enemy.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Enemy.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\Enemy.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Enemy.ts",
+              "RelativeToolTip": "assets\\scripts\\Enemy.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:08:13.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ColorUtils.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ColorUtils.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\ColorUtils.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\ColorUtils.ts",
+              "RelativeToolTip": "assets\\scripts\\ColorUtils.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-07-31T08:18:18.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CharacterMovement.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\CharacterMovement.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\CharacterMovement.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\CharacterMovement.ts",
+              "RelativeToolTip": "assets\\scripts\\CharacterMovement.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-07-31T09:35:15.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\GameManager.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\GameManager.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\GameManager.ts",
+              "RelativeToolTip": "assets\\scripts\\GameManager.ts",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-03T13:05:20.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Portal.ts",
+              "DocumentMoniker": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Portal.ts",
+              "RelativeDocumentMoniker": "assets\\scripts\\Portal.ts",
+              "ToolTip": "E:\\CocosProjects\\TombOfTheMaskOldMaze\\assets\\scripts\\Portal.ts",
+              "RelativeToolTip": "assets\\scripts\\Portal.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-05T11:06:21.941Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
