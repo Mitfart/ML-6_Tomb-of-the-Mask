@@ -1,9 +1,10 @@
-import { _decorator, Component, Node, director, UIOpacity, RigidBody, RigidBody2D, BoxCollider2D, Camera, AnimationComponent } from 'cc';
+import { _decorator, Component, Node, director, UIOpacity, RigidBody, RigidBody2D, BoxCollider2D, Camera, tween, Vec3 } from 'cc';
 import { AnimUtils } from './AnimUtils';
 import { CameraController } from './CameraController';
 import super_html_playable from './super_html_playable';
 import { ValueCarrier } from './ValueCarrier';
 import { CharacterMovement } from './CharacterMovement';
+import { StarBurst } from './StarBurst';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -92,14 +93,20 @@ export class GameManager extends Component {
         this.winScreen.setWorldPosition(CameraController.instance.node.worldPosition);
         this.winScreen.active = true;
         AnimUtils.animateOpacity(this.winScreen, 255, 0.5, () => {
-            const stars = this.winScreen.getChildByName("Panel").getChildByName("Stars").children;
-            let t = 0;
-            stars.forEach(star => {
+            const panel = this.winScreen.getChildByName("Panel");
+            // item5: lock appears via alpha fade-in + pop
+            const lock = panel?.getChildByName("Chest")?.getChildByName("Lock");
+            if (lock) {
+                const op = lock.getComponent(UIOpacity) || lock.addComponent(UIOpacity);
+                op.opacity = 0;
+                lock.setScale(0.6, 0.6, 1);
                 this.scheduleOnce(() => {
-                    star.getComponent(AnimationComponent).play("starAnimation");
-                }, t);
-                t += 0.2;
-            })
+                    tween(op).to(0.3, { opacity: 255 }).start();
+                    tween(lock).to(0.3, { scale: new Vec3(1, 1, 1) }, { easing: 'backOut' }).start();
+                }, 0.35);
+            }
+            // stars burst (replaces broken play("starAnimation"))
+            panel?.getChildByName("Stars")?.getComponent(StarBurst)?.play();
         });
     }
 

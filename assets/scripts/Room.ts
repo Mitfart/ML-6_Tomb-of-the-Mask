@@ -5,6 +5,7 @@ import { CameraController } from './CameraController';
 import { RoomRotator } from './RoomRotator';
 import { AudioController } from './AudioController';
 import { ColorUtils } from './ColorUtils';
+import { pulseHighlight } from './HighlightUtils';
 const { ccclass, property } = _decorator;
 
 @ccclass('Room')
@@ -38,6 +39,22 @@ export class Room extends Component {
 
         const enterCollicde = this.node.getChildByName("EnterCollider")?.getComponent(Collider2D);
         enterCollicde.off(Contact2DType.BEGIN_CONTACT, this.onEnter, this);
+
+        // Items 3+4: on entering Room2, highlight the parts to connect (Tunnel) twice,
+        // then the lever twice
+        if (this.node.name === "Room2") {
+            this.scheduleOnce(() => {
+                const tunnel = this.node.getChildByName("Tunnel");
+                if (tunnel) {
+                    pulseHighlight(tunnel, 2, () => {
+                        const lever = this.node.getChildByName("Lever");
+                        if (lever) {
+                            pulseHighlight(lever, 2);
+                        }
+                    });
+                }
+            }, 0.5);
+        }
 
         if (Room.currentRoom.node.name == "Room3") {
             GameManager.instance.rooms[3].getChildByName("Walls").getChildByName("FinalTunnel").getComponent(UIOpacity).opacity = 255;

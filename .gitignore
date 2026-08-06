@@ -22,3 +22,9 @@ node_modules/
 # WebStorm
 #//////////////////////////
 .idea/
+#//////////////////////////
+# Client example / agent tools
+#//////////////////////////
+__EXAMPLE/
+extensions/cocos-creator-mcp/
+settings/cocos-creator-mcp.json
