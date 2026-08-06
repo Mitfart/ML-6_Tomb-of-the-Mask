@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, director, UIOpacity, RigidBody, RigidBody2D, BoxCollider2D } from 'cc';
+import { _decorator, Component, Node, director, UIOpacity, RigidBody, RigidBody2D, BoxCollider2D, Camera, AnimationComponent } from 'cc';
 import { AnimUtils } from './AnimUtils';
 import { CameraController } from './CameraController';
 import super_html_playable from './super_html_playable';
@@ -77,14 +77,30 @@ export class GameManager extends Component {
     }
 
     public gameOver() {
-        CameraController.instance.reset();
-        //this.winScreen.getComponent(UIOpacity).opacity = 0;
+        //CameraController.instance.reset();
+        this.playerNode.getComponent(UIOpacity).opacity = 0;
+        this.failScreen.getComponent(UIOpacity).opacity = 0;
+        this.failScreen.setWorldPosition(CameraController.instance.node.worldPosition);
         this.failScreen.active = true;
+        AnimUtils.animateOpacity(this.failScreen, 255, 0.5);
     }
 
     public win() {
-        CameraController.instance.reset();
+        //CameraController.instance.reset();
+        this.playerNode.getComponent(UIOpacity).opacity = 0;
+        this.winScreen.getComponent(UIOpacity).opacity = 0;
+        this.winScreen.setWorldPosition(CameraController.instance.node.worldPosition);
         this.winScreen.active = true;
+        AnimUtils.animateOpacity(this.winScreen, 255, 0.5, () => {
+            const stars = this.winScreen.getChildByName("Panel").getChildByName("Stars").children;
+            let t = 0;
+            stars.forEach(star => {
+                this.scheduleOnce(() => {
+                    star.getComponent(AnimationComponent).play("starAnimation");
+                }, t);
+                t += 0.2;
+            })
+        });
     }
 
     onInstallButtonClick() {

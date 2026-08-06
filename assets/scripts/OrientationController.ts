@@ -1,5 +1,6 @@
 import { _decorator, Camera, Component, Node, view, game, sys, math, Vec3, UITransform, ResolutionPolicy, Animation, Widget, WidgetComponent, Vec2, Label, HorizontalTextAlignment } from 'cc';
 import { Room } from './Room';
+import { StickToScreenBottom } from './StickToScreenBottom';
 const { Quat } = math;
 const { ccclass, property } = _decorator;
 
@@ -11,17 +12,9 @@ export class OrientationSwitcher extends Component {
     camera: Camera = null!;
 
     @property(Node)
-    textStart: Node;
-    @property(Node)
-    textEnd: Node;
-    @property(Node)
-    buttonGame: Node;
-    @property(Node)
-    startScreen: Node;
-    @property(Node)
-    endScreen: Node;
-    @property([Node])
-    panels: Node[] = [];
+    panel: Node;
+    @property(StickToScreenBottom)
+    button: StickToScreenBottom;
 
     lastIsPortrait: boolean = false;
     private _hasInitialized: boolean = false;
@@ -159,79 +152,38 @@ export class OrientationSwitcher extends Component {
         }
         //this.key.setOrtho();
 
-        let panelScale = 1;
+        let panelScale = 1.6;
         let panelX = 0;
-        let panelY = -960;
-        let buttonGameScale = 0.9;
-        let buttonGameX = 300;
-        let buttonGameY = 1000;
-        let startY = 0;
+        let panelY = 0;
+        let buttonScale = 0.8;
+        this.button.bottomOffset = 150;
+        this.button.rightOffset = 300;
 
         if (isPortrait) {
             if (this.is169 || this.is169_2 || this.is1610) {
-                panelScale = 1.3;
-                buttonGameScale = 1;
-                buttonGameX = 400;
-                buttonGameY = 950;
+                panelScale = 1.8;
+                buttonScale = 1;
+                this.button.bottomOffset = 200;
             }
             if (this.isIpad || this.is15 || this.is43) {
-                panelScale = 1.4;
-                buttonGameScale = 1.2;
-                buttonGameX = 550;
-                buttonGameY = 950;
+                panelScale = 1.9;
+                buttonScale = 1.2;
+                this.button.bottomOffset = 200;
             }
+            this.button.alignToRight = false;
         }
         else {
-            startY = -200;
-            panelScale = 1;
-            panelX = -1200;
-            panelY = 550;
-            buttonGameScale = 1;
-            buttonGameX = 1300;
-            buttonGameY = 550;
-            if (this.is169 || this.is169_2 || this.is1610) {
-                panelX = -900;
-                buttonGameScale = 1;
-                buttonGameX = 1000;
+            panelScale = 1.3;
+            this.button.alignToRight = true;
+            if (this.isIpad || this.is15 || this.is43) {
+                buttonScale = 0.6;
+                this.button.bottomOffset = 100;
+                this.button.rightOffset = 230;
             }
-            if (this.isIpad || this.is15 || this.is43 || this.is1 || this.is15) {
-                panelScale = 0.8;
-                panelX = -650;
-                panelY = 550;
-                buttonGameScale = 0.9;
-                buttonGameX = 700;
-            }
-            if (this.is4) {
-                panelX = -1000;
-                buttonGameX = 1100;
-            }
-            //if (this.is3 || this.is1610) {
-            //    buttonGameX = -500;
-            //    panelX = 450;
-            //}
         }
-
-        //this.startScreen.setPosition(0, startY);
-        //this.logo.setScale(logoScale, logoScale);
-        //this.logo.setPosition(logoX, logoY);
-        //this.logoGame.setScale(logoGameScale, logoGameScale);
-        //this.logoGame.setPosition(logoGameX, logoGameY);
-        //this.panels.forEach(panel => {
-        //    panel.setScale(panelScale, panelScale);
-        //    if (isPortrait) {
-        //        panel.setPosition(panelX, panelY);
-        //    }
-        //});
-        //this.text.setScale(textScale, textScale);
-        //this.text.setPosition(textX, textY);
-        //this.endScreen.setScale(endScale, endScale);
-        //this.endScreen.setPosition(0, endY);
-        //this.button.setScale(buttonScale, buttonScale);
-        //this.button.setPosition(buttonX, buttonY);
-        //this.buttonGame.setScale(buttonGameScale, buttonGameScale);
-        //if (isPortrait) {
-        //    this.buttonGame.setPosition(buttonGameX, buttonGameY);
-        //}
+        this.panel.setScale(panelScale, panelScale);
+        this.button.node.setScale(buttonScale, buttonScale);
+        //panel.setPosition(panelX, panelY);
 
     }
 }
