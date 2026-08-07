@@ -65926,9 +65926,6 @@
       },
       {
         "__id__": 3650
-      },
-      {
-        "__id__": 3651
       }
     ],
     "_prefab": null,
@@ -66935,7 +66932,7 @@
     "spawnRate": 5,
     "speed": 300,
     "lifetime": 0.5,
-    "size": 1000,
+    "size": 50,
     "spawnRadius": 140,
     "finalScaleMultiplier": 0.3,
     "color1": {
@@ -68430,7 +68427,7 @@
       "b": 0,
       "a": 255
     },
-    "_string": "Install now",
+    "_string": "PLAY NOW!",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
     "_actualFontSize": 100,
