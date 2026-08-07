@@ -2,6 +2,8 @@ import { _decorator, Component, Collider2D, director, Label, Node, Sprite, Color
 import { GameManager } from './GameManager';
 import { AudioController } from './AudioController';
 import { GlowEffect } from './GlowEffect';
+import { cancelEvent, scheduleEvent } from './EventUtils';
+
 const { ccclass, property } = _decorator;
 
 @ccclass('Door')
@@ -10,6 +12,7 @@ export class Door extends Component {
 
     private _opened: boolean = false;
     private _glow: GlowEffect | null = null;
+    private _glowTimerId: number | null = null;   // stores the setTimeout ID for this door
 
     onLoad() {
         director.on('key-count-changed', this.onKeyCountChanged, this);
@@ -20,6 +23,11 @@ export class Door extends Component {
     onDisable() {
         director.off('key-count-changed', this.onKeyCountChanged, this);
         director.off('swipe', this.stopGlow, this);
+        this.cancelGlowTimer(); // clean up when disabled
+    }
+
+    onDestroy() {
+        this.cancelGlowTimer();
     }
 
     start() {
@@ -47,18 +55,49 @@ export class Door extends Component {
         }
     }
 
+    private startGlow() {
+        // Only start if the component exists, door is closed, and node is active
+        if (this._glow && !this._opened && this.node.active) {
+            this._glow.start();
+        }
+        this._glowTimerId = null; // timer has fired, clear the reference
+    }
+
     private stopGlow() {
         if (this._glow) {
-            this._glow.stop();
-            this._glow = null;
+            this._glow.stop();          // stop the visual effect
+            // Do NOT set this._glow = null – we want to keep the component for later restarts
+        }
+        
+        this.cancelGlowTimer();
+        this._glowTimerId = scheduleEvent(5, this.startGlow.bind(this));
+    }
+
+    private cancelGlowTimer() {
+        if (this._glowTimerId != null) {
+            cancelEvent(this._glowTimerId);
+            this._glowTimerId = null;
         }
     }
 
     private onKeyCountChanged(totalKeys: number) {
+        // If door is still closed and we have enough keys – open it
         if (!this._opened && totalKeys >= this.requiredKeys) {
             this.open();
             GameManager.instance.useKeys(totalKeys);
+            this.cancelGlowTimer();   // no glow after opening
+            return;
         }
+
+        // If door is already open, don't schedule glow
+        if (this._opened) {
+            this.cancelGlowTimer();
+            return;
+        }
+
+        // Otherwise, cancel any previous timer and schedule a new one
+        this.cancelGlowTimer();
+        this._glowTimerId = scheduleEvent(5, this.startGlow.bind(this));
     }
 
     private open() {
@@ -68,7 +107,7 @@ export class Door extends Component {
         if (collider) {
             collider.enabled = false;
         }
-        this.stopGlow();
+        this.stopGlow(); // stop effect and clear timer
 
         // Item 2: opened door highlight — flash 2x, then fade out before deactivating
         const spriteNode = this.node.getChildByName("Sprite");

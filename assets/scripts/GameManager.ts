@@ -82,7 +82,9 @@ export class GameManager extends Component {
         this.failScreen.getComponent(UIOpacity).opacity = 0;
         this.failScreen.setWorldPosition(CameraController.instance.node.worldPosition);
         this.failScreen.active = true;
-        AnimUtils.animateOpacity(this.failScreen, 255, 0.5);
+        this.scheduleOnce(()=>{
+            AnimUtils.animateOpacity(this.failScreen, 255, 2);
+        }, 1);
     }
 
     public win() {
