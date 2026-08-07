@@ -31,6 +31,17 @@ export class Room extends Component {
         }
 
         ColorUtils.setSpriteColorRecursively(this.node.getChildByName("Walls"), this.wallsColor);
+
+        
+                
+        [
+            this.node.getChildByName("Room_2_Exit"),
+            this.node.parent.getChildByName('Room3').getChildByName("Room_3_Enter")
+        ].forEach((highlightNode) => {
+            if (highlightNode) {
+                highlightNode.getComponent(UIOpacity).opacity = 0;
+            }
+        });
     }
 
     private onEnter(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
@@ -44,16 +55,31 @@ export class Room extends Component {
         // then the lever twice
         if (this.node.name === "Room2") {
             this.scheduleOnce(() => {
-                const tunnel = this.node.getChildByName("Tunnel");
-                if (tunnel) {
-                    pulseHighlight(tunnel, 2, () => {
-                        const lever = this.node.getChildByName("Lever");
-                        if (lever) {
-                            pulseHighlight(lever, 2);
-                        }
-                    });
-                }
-            }, 0.5);
+                [
+                    this.node.getChildByName("Tunnel"),
+                    this.node.getChildByName("Gate")
+                ].forEach((highlightNode) => {
+                    if (highlightNode) {
+                        pulseHighlight(highlightNode, 2);
+                    }
+                });
+                
+                [
+                    this.node.getChildByName("Room_2_Exit"),
+                    this.node.parent.getChildByName('Room3').getChildByName("Room_3_Enter")
+                ].forEach((highlightNode) => {
+                    if (highlightNode) {
+                        pulseHighlight(highlightNode, 2);
+                    }
+                });
+
+                this.scheduleOnce(() => {
+                    const lever = this.node.getChildByName("Lever");
+                    if (lever) {
+                        pulseHighlight(lever, 2);
+                    }
+                }, 1);
+            }, 1);
         }
 
         if (Room.currentRoom.node.name == "Room3") {

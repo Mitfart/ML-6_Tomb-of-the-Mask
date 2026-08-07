@@ -12,12 +12,17 @@ export function pulseHighlight(node: Node, blinks: number = 2, onDone?: () => vo
         op = node.addComponent(UIOpacity);
         op.opacity = 255;
     }
+
+    const baseScale = node.scale.clone();
     const base = op.opacity;
     op.opacity = base;
 
     const seq = tween(op);
     for (let i = 0; i < blinks; i++) {
-        seq.to(0.2, { opacity: 60 }).to(0.2, { opacity: base });
+        seq.to(0.2, { opacity: 60 })
+            .call(() => { tween(node).to(0.2, { scale: baseScale.clone().multiplyScalar(1.1) }).start(); });
+        seq.to(0.2, { opacity: base })
+            .call(() => { tween(node).to(0.2, { scale: baseScale }).start(); });
     }
     seq.call(() => { onDone?.(); }).start();
 }
