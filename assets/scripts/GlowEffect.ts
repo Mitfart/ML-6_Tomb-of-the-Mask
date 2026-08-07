@@ -3,7 +3,6 @@ const { ccclass, property } = _decorator;
 
 @ccclass('GlowEffect')
 export class GlowEffect extends Component {
-    @property phaseOffset: number = 0;
     private uiOpacity: UIOpacity | null = null;
     private _tween: Tween<UIOpacity> | null = null;
 
@@ -14,14 +13,12 @@ export class GlowEffect extends Component {
     start() {
         if (!this.uiOpacity) return;
 
-        this.scheduleOnce(() => {
-            this._tween = tween(this.uiOpacity)
-                .to(0.5, { opacity: 100 })
-                .to(0.5, { opacity: 255 })
-                .union()
-                .repeat(Infinity)
-                .start();
-        }, this.phaseOffset);
+        this._tween = tween(this.uiOpacity)
+            .to(0.5, { opacity: 100 })
+            .to(0.5, { opacity: 255 })
+            .union()
+            .repeat(Infinity)
+            .start();
     }
 
     public stop(): void {
