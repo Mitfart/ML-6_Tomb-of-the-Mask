@@ -127,7 +127,6 @@ export class CharacterMovement extends Component {
     private onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
         if (this._state !== MoveState.MOVING) return;
         if (!contact) return;
-        if (this._stopLock && otherCollider.group !== this.cwGroupIndex && otherCollider.group !== this.ccwGroupIndex) return;
 
         const otherGroup = otherCollider.group;
 
