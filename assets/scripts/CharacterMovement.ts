@@ -1,4 +1,4 @@
-import { _decorator, Component, RigidBody2D, Collider2D, Contact2DType, IPhysics2DContact, Vec2, Vec3, director, v2, PhysicsSystem2D, ERaycast2DType } from 'cc';
+import { _decorator, Component, Node, RigidBody2D, Collider2D, Contact2DType, IPhysics2DContact, Vec2, Vec3, director, v2, PhysicsSystem2D, ERaycast2DType } from 'cc';
 import { RoomRotator } from './RoomRotator';
 import { GameManager } from './GameManager';
 import { Room } from './Room';
@@ -22,10 +22,13 @@ export class CharacterMovement extends Component {
     @property cwGroupIndex: number = 64;
     @property ccwGroupIndex: number = 128;
     @property minWallDistance: number = 60;
+    @property(Node) levelLabel: Node = null!;
+    @property(Vec2) levelLabelOffset: Vec2 = new Vec2(0, 70);
 
     private _rigidBody: RigidBody2D = null!;
     private _state: MoveState = MoveState.IDLE;
     private _stopLock: boolean = false;
+    private _inputBlockCount: number = 0;
     private _moveDirection: Vec2 = new Vec2();
     private _lastStopTime: number = 0;
     private _lastWallNormal: Vec2 = new Vec2();
@@ -61,7 +64,7 @@ export class CharacterMovement extends Component {
     }
 
     private onSwipe(direction: Vec2) {
-        if (this._state !== MoveState.IDLE) return;
+        if (this._inputBlockCount || this._state !== MoveState.IDLE) return;
         if (Date.now() - this._lastStopTime < 50) return;
         if (RoomRotator.instance.isRotating) return;
 
@@ -168,7 +171,7 @@ export class CharacterMovement extends Component {
                 this._hitInvisible = true;
             }
             this._stopLock = true;
-            this.stopAndSeparate(contact);
+            this.stopAndSeparate(new Vec2(normal.x, normal.y));
         }
 
         if (otherGroup === this.ccwGroupIndex) {
@@ -183,11 +186,10 @@ export class CharacterMovement extends Component {
         }
     }
 
-    private stopAndSeparate(contact: IPhysics2DContact) {
+    private stopAndSeparate(normal: Vec2) {
         this._rigidBody.linearVelocity = Vec2.ZERO.clone();
 
         this.scheduleOnce(() => {
-            const normal = contact.getWorldManifold().normal;
             this._lastWallNormal.set(normal.x, normal.y);
             this._hasWallNormal = true;
 
@@ -211,9 +213,8 @@ export class CharacterMovement extends Component {
                 this._lastWallNormal = new Vec2();
                 this._hasWallNormal = false;
                 this.node.angle = 0;
-                let label = this.node.getChildByName("Label");
-                label.angle = 0;
-                label.setPosition(0, 70);
+                this.levelLabel.angle = 0;
+                this.positionLevelLabel(0);
                 this._hitInvisible = false;
             }
             else {
@@ -235,9 +236,18 @@ export class CharacterMovement extends Component {
         }
 
         this.node.angle = angle;
-        let label = this.node.getChildByName("Label");
-        label.angle = -angle;
-        label.setPosition(direction.x * 70, direction.y * -70);
+        this.levelLabel.angle = -angle;
+        this.positionLevelLabel(angle);
+    }
+
+    private positionLevelLabel(angle: number): void {
+        const radians = angle * Math.PI / 180;
+        const cos = Math.cos(radians);
+        const sin = Math.sin(radians);
+        this.levelLabel.setPosition(
+            this.levelLabelOffset.x * cos + this.levelLabelOffset.y * sin,
+            -this.levelLabelOffset.x * sin + this.levelLabelOffset.y * cos
+        );
     }
 
     public get isMoving(): boolean {
@@ -248,6 +258,14 @@ export class CharacterMovement extends Component {
         this._hasWallNormal = false;
     }
 
+    public blockInput(): void {
+        this._inputBlockCount++;
+    }
+
+    public unblockInput(): void {
+        this._inputBlockCount--;
+    }
+
     public stop() {
         this._rigidBody.linearVelocity = Vec2.ZERO.clone();
         this.scheduleOnce(() => {
@@ -255,9 +273,8 @@ export class CharacterMovement extends Component {
             this._lastWallNormal = new Vec2();
             this._hasWallNormal = false;
             this.node.angle = 0;
-            let label = this.node.getChildByName("Label");
-            label.angle = 0;
-            label.setPosition(0, 70);
+            this.levelLabel.angle = 0;
+            this.positionLevelLabel(0);
             this.node.getChildByName("Sprite").active = true;
             this.node.getChildByName("Light").active = false;
             this._state = MoveState.IDLE;

@@ -34,6 +34,8 @@ export class GameManager extends Component {
             return;
         }
         GameManager._instance = this;
+        const hpOpacity = this.hp.getComponent(UIOpacity) || this.hp.addComponent(UIOpacity);
+        hpOpacity.opacity = 0;
         director.addPersistRootNode(this.node);
         //this.rooms[2].active = false;
         //this.rooms[3].active = false;
@@ -51,6 +53,10 @@ export class GameManager extends Component {
             return true;
         }
         return false;
+    }
+
+    showHp() {
+        AnimUtils.animateOpacity(this.hp, 255, 0.5);
     }
 
     onHealthLoss() {

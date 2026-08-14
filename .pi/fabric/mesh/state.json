@@ -1,0 +1,463 @@
+{
+  "format": 1,
+  "entries": {
+    "topology/hosts/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f": {
+      "key": "topology/hosts/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f",
+      "value": {
+        "format": 1,
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "rootId": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "identity": {
+          "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b"
+        },
+        "startedAt": 1786456784350,
+        "updatedAt": 1786458636473,
+        "expiresAt": 1786458651473
+      },
+      "version": 562,
+      "updatedAt": 1786458636486,
+      "updatedBy": {
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b"
+      }
+    },
+    "sessions/019ff115-fe60-7860-aaa9-d6df4ff9a34b": {
+      "key": "sessions/019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+      "value": {
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "name": "Peer 019ff115",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786456784349,
+        "updatedAt": 1786458636473,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 561,
+      "updatedAt": 1786458636512,
+      "updatedBy": {
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b"
+      }
+    },
+    "topology/participants/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f": {
+      "key": "topology/participants/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f",
+      "value": {
+        "format": 1,
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "kind": "root",
+        "rootId": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "ownerHostId": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "ownerIdentityId": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786456784349,
+        "updatedAt": 1786458636473,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 562,
+      "updatedAt": 1786458636539,
+      "updatedBy": {
+        "id": "session:019ff115-fe60-7860-aaa9-d6df4ff9a34b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff115-fe60-7860-aaa9-d6df4ff9a34b"
+      }
+    },
+    "topology/hosts/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46": {
+      "key": "topology/hosts/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46",
+      "value": {
+        "format": 1,
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "rootId": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "identity": {
+          "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f"
+        },
+        "startedAt": 1786518780015,
+        "updatedAt": 1786520668677,
+        "expiresAt": 1786520683677
+      },
+      "version": 427,
+      "updatedAt": 1786520668706,
+      "updatedBy": {
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f"
+      }
+    },
+    "sessions/019ff4d0-8efe-7fa0-a37b-a8a290300c1f": {
+      "key": "sessions/019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+      "value": {
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "name": "Peer 019ff4d0",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786518780013,
+        "updatedAt": 1786520668677,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 427,
+      "updatedAt": 1786520668751,
+      "updatedBy": {
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f"
+      }
+    },
+    "topology/participants/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46": {
+      "key": "topology/participants/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46",
+      "value": {
+        "format": 1,
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "kind": "root",
+        "rootId": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "ownerHostId": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "ownerIdentityId": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786518780013,
+        "updatedAt": 1786520668678,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 427,
+      "updatedAt": 1786520668787,
+      "updatedBy": {
+        "id": "session:019ff4d0-8efe-7fa0-a37b-a8a290300c1f",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff4d0-8efe-7fa0-a37b-a8a290300c1f"
+      }
+    },
+    "topology/hosts/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1": {
+      "key": "topology/hosts/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1",
+      "value": {
+        "format": 1,
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "rootId": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "identity": {
+          "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341"
+        },
+        "startedAt": 1786545937237,
+        "updatedAt": 1786546690060,
+        "expiresAt": 1786546705060
+      },
+      "version": 202,
+      "updatedAt": 1786546690088,
+      "updatedBy": {
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341"
+      }
+    },
+    "sessions/019ff66e-9566-7ee5-8c6f-b57ea4283341": {
+      "key": "sessions/019ff66e-9566-7ee5-8c6f-b57ea4283341",
+      "value": {
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "name": "Peer 019ff66e",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786545937235,
+        "updatedAt": 1786546690060,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 202,
+      "updatedAt": 1786546690128,
+      "updatedBy": {
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341"
+      }
+    },
+    "topology/participants/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1": {
+      "key": "topology/participants/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1",
+      "value": {
+        "format": 1,
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "kind": "root",
+        "rootId": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "ownerHostId": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "ownerIdentityId": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786545937235,
+        "updatedAt": 1786546690060,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 202,
+      "updatedAt": 1786546690168,
+      "updatedBy": {
+        "id": "session:019ff66e-9566-7ee5-8c6f-b57ea4283341",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ff66e-9566-7ee5-8c6f-b57ea4283341"
+      }
+    },
+    "topology/hosts/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122": {
+      "key": "topology/hosts/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122",
+      "value": {
+        "format": 1,
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "rootId": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "identity": {
+          "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181"
+        },
+        "startedAt": 1786626566234,
+        "updatedAt": 1786627252029,
+        "expiresAt": 1786627267029
+      },
+      "version": 177,
+      "updatedAt": 1786627252045,
+      "updatedBy": {
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181"
+      }
+    },
+    "sessions/019ffb3c-466d-7158-bde1-09a804da4181": {
+      "key": "sessions/019ffb3c-466d-7158-bde1-09a804da4181",
+      "value": {
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "name": "Peer 019ffb3c",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786626566233,
+        "updatedAt": 1786627252029,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 177,
+      "updatedAt": 1786627252072,
+      "updatedBy": {
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181"
+      }
+    },
+    "topology/participants/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122": {
+      "key": "topology/participants/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122",
+      "value": {
+        "format": 1,
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "kind": "root",
+        "rootId": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "ownerHostId": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "ownerIdentityId": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786626566233,
+        "updatedAt": 1786627252029,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 177,
+      "updatedAt": 1786627252101,
+      "updatedBy": {
+        "id": "session:019ffb3c-466d-7158-bde1-09a804da4181",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019ffb3c-466d-7158-bde1-09a804da4181"
+      }
+    },
+    "topology/hosts/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": {
+      "key": "topology/hosts/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed",
+      "value": {
+        "format": 1,
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "rootId": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "identity": {
+          "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "019fffd7-4fdb-777c-902c-79834c791223"
+        },
+        "startedAt": 1786703834077,
+        "updatedAt": 1786704260620,
+        "expiresAt": 1786704275620
+      },
+      "version": 86,
+      "updatedAt": 1786704260643,
+      "updatedBy": {
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019fffd7-4fdb-777c-902c-79834c791223"
+      }
+    },
+    "sessions/019fffd7-4fdb-777c-902c-79834c791223": {
+      "key": "sessions/019fffd7-4fdb-777c-902c-79834c791223",
+      "value": {
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "name": "Peer 019fffd7",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019fffd7-4fdb-777c-902c-79834c791223",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786703834076,
+        "updatedAt": 1786704260620,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 86,
+      "updatedAt": 1786704260686,
+      "updatedBy": {
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019fffd7-4fdb-777c-902c-79834c791223"
+      }
+    },
+    "topology/participants/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": {
+      "key": "topology/participants/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed",
+      "value": {
+        "format": 1,
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "kind": "root",
+        "rootId": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "ownerHostId": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "ownerIdentityId": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "019fffd7-4fdb-777c-902c-79834c791223",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1786703834076,
+        "updatedAt": 1786704260620,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 86,
+      "updatedAt": 1786704260724,
+      "updatedBy": {
+        "id": "session:019fffd7-4fdb-777c-902c-79834c791223",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "019fffd7-4fdb-777c-902c-79834c791223"
+      }
+    }
+  },
+  "versions": {
+    "topology/hosts/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f": 562,
+    "sessions/019ff115-fe60-7860-aaa9-d6df4ff9a34b": 561,
+    "topology/participants/153dea176c55612bf18edeeb64fb3f3a494c5fcba48b1ae782392acd2f20752f": 562,
+    "topology/hosts/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46": 427,
+    "sessions/019ff4d0-8efe-7fa0-a37b-a8a290300c1f": 427,
+    "topology/participants/5080a323776986d9526cd08ee19ba8714cf6926ff29f64285de97b0e335d4f46": 427,
+    "topology/hosts/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1": 202,
+    "sessions/019ff66e-9566-7ee5-8c6f-b57ea4283341": 202,
+    "topology/participants/8d3450e69075adcca103fe9036de526c4b2e021c54cabab1f149e32831492fe1": 202,
+    "topology/hosts/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122": 177,
+    "sessions/019ffb3c-466d-7158-bde1-09a804da4181": 177,
+    "topology/participants/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122": 177,
+    "topology/hosts/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": 86,
+    "sessions/019fffd7-4fdb-777c-902c-79834c791223": 86,
+    "topology/participants/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": 86
+  },
+  "tombstoneOrder": []
+}

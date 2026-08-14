@@ -49,31 +49,19 @@ export class OrientationSwitcher extends Component {
             this.applyOrientation(currentIsPortrait);
             this.lastIsPortrait = currentIsPortrait;
         }
-        if (currentIsPortrait == false) {
-            this.camera.orthoHeight = 700;
-        }
-        else {
-            if (Room.currentRoom.node.name == "Room4") {
-                this.camera.orthoHeight = 1500;
-            }
-            else if (Room.currentRoom.node.name == "Room3") {
-                this.camera.orthoHeight = 1500;
-            }
-            else {
-                this.camera.orthoHeight = 1300;
-            }
-        }
+
+        this.camera.orthoHeight = currentIsPortrait ? this.is43 ? 1200 : 1500 : this.is43 ? 900 : 800;
         //this.camera.orthoHeight = currentIsPortrait ? this.portraitHeight : this.landscapeHeight;
     }
 
     isPortrait(): boolean {
-        // Веб-платформа — берём реальный DOM canvas
+        // пїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ DOM canvas
         if (sys.isBrowser) {
             const canvas = game.canvas as HTMLCanvasElement;
             const width = canvas?.clientWidth ?? 0;
             const height = canvas?.clientHeight ?? 0;
 
-            // fallback, если canvas не получен или размеры нулевые
+            // fallback, пїЅпїЅпїЅпїЅ canvas пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
             if (width === 0 || height === 0) {
                 const visibleSize = view.getVisibleSize();
                 return visibleSize.height >= visibleSize.width;
@@ -111,7 +99,7 @@ export class OrientationSwitcher extends Component {
         }
 
 
-        // Натив или симулятор
+        // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         const visibleSize = view.getVisibleSize();
 
         if (visibleSize.height < visibleSize.width) {
@@ -153,22 +141,16 @@ export class OrientationSwitcher extends Component {
         //this.key.setOrtho();
 
         let panelScale = 1.6;
-        let panelX = 0;
-        let panelY = 0;
         let buttonScale = 0.8;
-        this.button.bottomOffset = 150;
-        this.button.rightOffset = 300;
 
         if (isPortrait) {
             if (this.is169 || this.is169_2 || this.is1610) {
                 panelScale = 1.8;
                 buttonScale = 1;
-                this.button.bottomOffset = 200;
             }
             if (this.isIpad || this.is15 || this.is43) {
                 panelScale = 1.9;
                 buttonScale = 1.2;
-                this.button.bottomOffset = 200;
             }
             this.button.alignToRight = false;
         }
@@ -177,10 +159,9 @@ export class OrientationSwitcher extends Component {
             this.button.alignToRight = true;
             if (this.isIpad || this.is15 || this.is43) {
                 buttonScale = 0.6;
-                this.button.bottomOffset = 100;
-                this.button.rightOffset = 230;
             }
         }
+
         this.panel.setScale(panelScale, panelScale);
         this.button.node.setScale(buttonScale, buttonScale);
         //panel.setPosition(panelX, panelY);

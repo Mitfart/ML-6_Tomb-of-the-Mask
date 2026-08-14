@@ -38,7 +38,7 @@ export class CameraController extends Component {
         this.node.setPosition(this._currentPos);
     }
 
-    moveTo(targetWorldPos: Vec3, duration: number) {
+    moveTo(targetWorldPos: Vec3, duration: number, onComplete: () => void = () => {}) {
         this._moving = true;
         if (this._activeTween) {
             this._activeTween.stop();
@@ -49,6 +49,7 @@ export class CameraController extends Component {
             let pos = this.node.parent.getComponent(UITransform).convertToNodeSpaceAR(targetWorldPos);
             this._currentPos = new Vec3(pos.x, pos.y, 1000);
             this._moving = false;
+            onComplete();
         }, 'linear');
     }
 
