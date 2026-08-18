@@ -14,9 +14,6 @@ export class OrientationSwitcher extends OrientationSwitch {
     @property(Node)
     panel: Node = null!;
 
-    @property(StickToScreenBottom)
-    button: StickToScreenBottom = null!;
-
     protected onLoad(): void {
         OrientationSwitcher.instance = this;
         super.onLoad();
@@ -36,7 +33,6 @@ export class OrientationSwitcher extends OrientationSwitch {
         this.camera.orthoHeight = isPortrait
             ? isFourByThreeOrBigger ? 1000 : 1500
             : isFourByThreeOrBigger ? 1000 : 800;
-        this.button.alignToRight = !isPortrait;
         this.panel.setScale(panelScale, panelScale);
     }
 }
