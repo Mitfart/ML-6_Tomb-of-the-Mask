@@ -440,6 +440,94 @@
         "kind": "main",
         "sessionId": "019fffd7-4fdb-777c-902c-79834c791223"
       }
+    },
+    "topology/hosts/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5": {
+      "key": "topology/hosts/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5",
+      "value": {
+        "format": 1,
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "rootId": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "identity": {
+          "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+          "name": "main",
+          "kind": "main",
+          "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b"
+        },
+        "startedAt": 1787034691203,
+        "updatedAt": 1787035554456,
+        "expiresAt": 1787035569456
+      },
+      "version": 216,
+      "updatedAt": 1787035554467,
+      "updatedBy": {
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b"
+      }
+    },
+    "sessions/01a01391-2dfe-7532-bb6f-731e918e496b": {
+      "key": "sessions/01a01391-2dfe-7532-bb6f-731e918e496b",
+      "value": {
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "name": "Peer 01a01391",
+        "kind": "peer",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1787034691203,
+        "updatedAt": 1787035554456,
+        "pendingMessages": false,
+        "local": false
+      },
+      "version": 216,
+      "updatedAt": 1787035554489,
+      "updatedBy": {
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b"
+      }
+    },
+    "topology/participants/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5": {
+      "key": "topology/participants/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5",
+      "value": {
+        "format": 1,
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "kind": "root",
+        "rootId": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "ownerHostId": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "ownerIdentityId": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "name": "main",
+        "status": "idle",
+        "runner": "pi",
+        "transport": "host",
+        "capabilities": [
+          "steer",
+          "followUp",
+          "fabric"
+        ],
+        "cwd": "D:\\Work\\Cocos\\ML-6",
+        "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b",
+        "model": "openai-codex/gpt-5.6-terra",
+        "thinking": "medium",
+        "startedAt": 1787034691203,
+        "updatedAt": 1787035554456,
+        "pendingMessages": false,
+        "controlProtocol": "v1"
+      },
+      "version": 216,
+      "updatedAt": 1787035554511,
+      "updatedBy": {
+        "id": "session:01a01391-2dfe-7532-bb6f-731e918e496b",
+        "name": "main",
+        "kind": "main",
+        "sessionId": "01a01391-2dfe-7532-bb6f-731e918e496b"
+      }
     }
   },
   "versions": {
@@ -457,7 +545,10 @@
     "topology/participants/e761ca1be821ec0228cb3ce45913e940dd2a63f26f0c42637364555ecf4cd122": 177,
     "topology/hosts/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": 86,
     "sessions/019fffd7-4fdb-777c-902c-79834c791223": 86,
-    "topology/participants/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": 86
+    "topology/participants/d8b23c612361131e7e1fc5e59e1af1bd76d20628249a406d072ae2e63e3470ed": 86,
+    "topology/hosts/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5": 216,
+    "sessions/01a01391-2dfe-7532-bb6f-731e918e496b": 216,
+    "topology/participants/dd51e5299a638bc84806309c0b3abfa01df061e50ccec709dafe1606c6a22ed5": 216
   },
   "tombstoneOrder": []
 }
