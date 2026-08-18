@@ -73422,7 +73422,7 @@
       "__id__": 4
     },
     "bottomOffset": 250,
-    "alignToRight": false,
+    "alignToRight": true,
     "rightOffset": 400,
     "_id": "7ddrkxiC5Bo7jPuMdcXkQQ"
   },
@@ -73678,9 +73678,6 @@
     },
     "panel": {
       "__id__": 3861
-    },
-    "button": {
-      "__id__": 4010
     },
     "_id": "23suvDiNhMKKqFnpXQBVhs"
   },
