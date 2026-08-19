@@ -4,6 +4,7 @@ import { CameraController } from './CameraController';
 import super_html_playable from './super_html_playable';
 import { ValueCarrier } from './ValueCarrier';
 import { CharacterMovement } from './CharacterMovement';
+import { KeysUI } from './KeysUI';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameManager')
@@ -16,6 +17,7 @@ export class GameManager extends Component {
     @property([Node]) rooms: Node[] = [];
     @property(Node) hp: Node = null!;
     @property(Node) splash: Node = null!;
+    @property(KeysUI) keysUI: KeysUI = null!;
 
     private _keys: number = 0;
     private _health: number = 3;
@@ -41,14 +43,25 @@ export class GameManager extends Component {
         //this.rooms[3].active = false;
     }
 
+    start() {
+        this.keysUI.setValue(this._keys);
+        this.keysUI.show();
+    }
+
+    hideKeysUI() {
+        this.keysUI.hide();
+    }
+
     addKey(amount: number = 1) {
         this._keys += amount;
+        this.keysUI.setValue(this._keys);
         director.emit('key-count-changed', this._keys);
     }
 
     useKeys(amount: number): boolean {
         if (this._keys >= amount) {
             this._keys -= amount;
+            this.keysUI.setValue(this._keys);
             director.emit('key-count-changed', this._keys);
             return true;
         }

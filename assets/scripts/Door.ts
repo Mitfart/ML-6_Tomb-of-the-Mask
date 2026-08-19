@@ -9,6 +9,7 @@ const { ccclass, property } = _decorator;
 @ccclass('Door')
 export class Door extends Component {
     @property requiredKeys: number = 1;
+    @property finalDoor: boolean = false;
 
     private _opened: boolean = false;
     private _glow: GlowEffect | null = null;
@@ -82,9 +83,8 @@ export class Door extends Component {
 
     private onKeyCountChanged(totalKeys: number) {
         // If door is still closed and we have enough keys – open it
-        if (!this._opened && totalKeys >= this.requiredKeys) {
+        if (!this._opened && totalKeys >= this.requiredKeys && GameManager.instance.useKeys(totalKeys)) {
             this.open();
-            GameManager.instance.useKeys(totalKeys);
             this.cancelGlowTimer();   // no glow after opening
             return;
         }
@@ -103,6 +103,7 @@ export class Door extends Component {
     private open() {
         AudioController.instance.playSound("Door");
         this._opened = true;
+        if (this.finalDoor) GameManager.instance.hideKeysUI();
         const collider = this.getComponent(Collider2D);
         if (collider) {
             collider.enabled = false;

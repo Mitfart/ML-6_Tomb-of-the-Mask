@@ -1,13 +1,13 @@
 {
   "version": 1,
   "layers": [],
-  "updatedAt": "2026-08-18T06:32:53.276Z",
+  "updatedAt": "2026-08-18T14:22:45.692Z",
   "servers": {
     "cocos-creator-mcp": {
       "definitionHash": "c5e91a358238501eea301ee972f55ed4d0b8e15fe4a670ad32b659ea6384041b",
       "transport": "http",
       "description": null,
-      "fetchedAt": "2026-08-18T06:32:53.163Z",
+      "fetchedAt": "2026-08-18T14:22:45.540Z",
       "stale": false,
       "tools": [
         {
