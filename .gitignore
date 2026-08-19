@@ -28,3 +28,10 @@ node_modules/
 __EXAMPLE/
 extensions/cocos-creator-mcp/
 settings/cocos-creator-mcp.json
+
+# Local Cocos and editor output
+**/.*/
+**/_*/
+native/
+.vs/
+.creator/
